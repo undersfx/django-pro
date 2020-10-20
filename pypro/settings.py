@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'collectfast',
     'django.contrib.staticfiles',
     'pypro.base',
 ]
@@ -130,10 +131,14 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'mediafiles'
 
+COLLECTFAST_ENABLED = False
+
 # CDN Config
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
 if AWS_ACCESS_KEY_ID:
+    COLLECTFAST_ENABLED = False
+
     # django-s3-folder-storage config
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
