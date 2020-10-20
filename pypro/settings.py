@@ -137,7 +137,7 @@ COLLECTFAST_ENABLED = False
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
 if AWS_ACCESS_KEY_ID:
-    COLLECTFAST_ENABLED = False
+    COLLECTFAST_ENABLED = True
 
     # django-s3-folder-storage config
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
