@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 from decouple import config, Csv
 from functools import partial
+from sentry_sdk.integrations.django import DjangoIntegration
+import sentry_sdk
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -174,3 +176,14 @@ if AWS_ACCESS_KEY_ID:
     # S3 folder app config
     INSTALLED_APPS.append('s3_folder_storage')
     INSTALLED_APPS.append('storages')
+
+# Sentry Config
+SENTRY_DNS = config('SENTRY_DNS', default=None)
+
+if SENTRY_DNS:
+    sentry_sdk.init(
+        dsn=SENTRY_DNS,
+        integrations=[DjangoIntegration()],
+        traces_sample_rate=1.0,
+        send_default_pii=True
+    )
