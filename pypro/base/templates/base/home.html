@@ -21,22 +21,30 @@
   </head>
   <body>
 
-<div class="container-fluid">
+<div class="container-fluid pb-3">
 	<div class="row">
 		<div class="col-md-12">
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			  <a class="navbar-brand" href="{% url 'base:home' %}">Python Pro</a>
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			  </button>
+				<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+					<div class="container">
+						<a class="navbar-brand" href="{% url 'base:home' %}">Python Pro</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
 
-			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
 
-				</ul>
-			  </div>
-			</nav>
+							</ul>
+						</div>
+					</div>
+				</nav>
+		</div>
+	</div>
+</div>
 
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
 			<div class="jumbotron" style="margin-bottom:1rem;">
 				<h2>
 					Curso de Python com Thiago Rodrigues
@@ -78,5 +86,31 @@
 		</div>
 	</div>
 </div>
+
+  <footer class="main-footer mt-3 pt-4 text-light">
+	  <div class="container">
+		  <div class="row">
+			  <div class="col">
+				<h3>Entre em contato</h3>
+				  <address>
+					  <a href="tel:+5511993335283" class="text-light">+55 11 99-333-5283</a>
+					  <br/>
+					  <a href="mailto:thiago.rfr@hotmail.com" class="text-light">thiago.rfr@hotmail.com</a>
+				  </address>
+			  </div>
+		  </div>
+	  </div>
+
+	  <div class="rights pb-2 pt-2">
+	  <div class="container">
+		  <div class="row">
+			  <div class="col">
+				{% now 'Y' %} Python Pro. Todos os direitos reservados.
+			  </div>
+		  </div>
+	  </div>
+	  </div>
+  </footer>
+
   </body>
 </html>
