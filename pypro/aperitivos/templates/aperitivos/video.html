@@ -7,10 +7,10 @@
 	<div class="container">
 		<div class="row pb-3">
 			<div class="col-md-12 mb-3">
-                <h1>Video Aperitivo: Motivação</h1>
+                <h1>{{ video.titulo }}</h1>
 		    </div>
             <div class="embed-container mw-100">
-                <iframe src="https://player.vimeo.com/video/501491219" width="640" height="361" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/{{ video.vimeo_id }}" width="640" height="361" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 		    </div>
 		</div>
 	</div>
