@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Python Pro{% endblock title %}
+
+{% block body %}
+	<div class="container">
+		<div class="row pb-3">
+			<div class="col-md-12 mb-3">
+                <h1>Lista de Vídeos Aperitivo</h1>
+		    </div>
+			<div class="col-md-12 mb-3">
+				<ol>
+                {% for video in videos %}
+					<li>{{ video.titulo | default:"Faltando Título"}}</li>
+				{% empty %}
+					<li>Nenhum vídeo disponível</li>
+				{% endfor %}
+				</ol>
+		    </div>
+		</div>
+	</div>
+{% endblock body %}
