@@ -12,7 +12,7 @@
 			<div class="col-md-12 mb-3">
 				<ol>
                 {% for video in videos %}
-					<li>{{ video.titulo | default:"Faltando Título"}}</li>
+					<li><a href="{{ video.get_absolute_url }}">{{ video.titulo | default:"Faltando Título"}}</a></li>
 				{% empty %}
 					<li>Nenhum vídeo disponível</li>
 				{% endfor %}
