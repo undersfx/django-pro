@@ -11,7 +11,7 @@ videos_dct = {v.slug: v for v in videos}
 
 
 def video(request, slug):
-    video = videos_dct[slug]
+    video = Video.objects.get(slug=slug)
     return render(request, 'aperitivos/video.html', context={'video': video})
 
 
