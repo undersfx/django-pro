@@ -2,13 +2,12 @@ import pytest
 from django.urls import reverse
 from pypro.django_assertions import assert_contains
 from pypro.aperitivos.models import Video
+from model_bakery import baker
 
 
 @pytest.fixture()
 def video(db):
-    video_obj = Video(slug='motivacao', titulo='Video Aperitivo: Motivação', vimeo_id='501491219')
-    video_obj.save()
-    return video_obj
+    return baker.make(Video)
 
 
 @pytest.fixture()
