@@ -8,5 +8,6 @@ def video(request, slug):
 
 
 def index(request):
+    # TODO: Refactorar regra de negócio para um modulo de fachada (facade).
     videos = Video.objects.order_by('creation').all()
     return render(request, 'aperitivos/index.html', context={'videos': videos})
