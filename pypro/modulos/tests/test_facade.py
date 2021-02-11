@@ -10,4 +10,4 @@ def modulos(db):
 
 
 def test_lista_modulos_ordenados(modulos):
-    assert list(sorted(modulos, key=lambda modulo: modulo.titulo)) == facade.lista_modulos_ordenados()
+    assert list(sorted(modulos, key=lambda modulo: modulo.order)) == facade.lista_modulos_ordenados()
