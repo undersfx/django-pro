@@ -9,3 +9,7 @@ def lista_modulos_ordenados() -> List[Modulo]:
     """
     queryset = Modulo.objects.order_by('order').all()
     return list(queryset)
+
+
+def encontrar_modulo(slug: str) -> Modulo:
+    return Modulo.objects.get(slug=slug)
