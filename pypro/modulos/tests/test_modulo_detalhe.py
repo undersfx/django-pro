@@ -2,12 +2,17 @@ import pytest
 from pypro.django_assertions import assert_contains
 from django.urls import reverse
 from model_bakery import baker
-from pypro.modulos.models import Modulo
+from pypro.modulos.models import Modulo, Aula
 
 
 @pytest.fixture()
 def modulo(db):
     return baker.make(Modulo)
+
+
+@pytest.fixture()
+def aulas(modulo):
+    return baker.make(Aula, 3, modulo=modulo)
 
 
 @pytest.fixture()
@@ -26,3 +31,8 @@ def test_publico(resp, modulo: Modulo):
 
 def test_descricao(resp, modulo: Modulo):
     assert_contains(resp, modulo.descricao)
+
+
+def test_aulas_titulo(resp, aulas):
+    for aula in aulas:
+        assert_contains(resp, aula.titulo)
