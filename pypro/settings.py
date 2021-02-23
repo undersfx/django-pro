@@ -151,7 +151,7 @@ AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
 if AWS_ACCESS_KEY_ID:
     COLLECTFAST_ENABLED = True
-    STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+    # STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
     COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
 
     # django-s3-folder-storage config
