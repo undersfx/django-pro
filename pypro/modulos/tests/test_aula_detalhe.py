@@ -23,3 +23,7 @@ def resp(client, aula):
 
 def test_titulo(resp, aula: Aula):
     assert_contains(resp, aula.titulo)
+
+
+def test_video_vimeo(resp, aula: Aula):
+    assert_contains(resp, f"https://player.vimeo.com/video/{aula.vimeo_id}")
