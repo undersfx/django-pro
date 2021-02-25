@@ -14,3 +14,6 @@ test:
 
 docker-build:
 	docker-compose up -d
+
+shell_plus:
+	python manage.py shell_plus
