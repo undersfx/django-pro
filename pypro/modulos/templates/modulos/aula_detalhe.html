@@ -4,19 +4,13 @@
 {% block title %}Python Pro{% endblock title %}
 
 {% block body %}
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<nav aria-label="breadcrumb">
-						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="/">Home</a></li>
-							<li class="breadcrumb-item"><a href="{{aula.modulo.get_absolute_url}}">{{aula.modulo.titulo}}</a></li>
-							<li class="breadcrumb-item active" aria-current="page">{{aula.titulo}}</li>
-						</ol>
-				</nav>
-			</div>
-		</div>
-	</div>
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="/">Home</a></li>
+			<li class="breadcrumb-item"><a href="{{aula.modulo.get_absolute_url}}">{{aula.modulo.titulo}}</a></li>
+			<li class="breadcrumb-item active" aria-current="page">{{aula.titulo}}</li>
+		</ol>
+	</nav>
 
 	<div class="container">
 		<div class="row pb-3">
