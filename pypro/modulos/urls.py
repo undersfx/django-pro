@@ -1,10 +1,11 @@
 from django.urls import path
-from pypro.modulos.views import detalhe, aula
+from pypro.modulos import views
 
 
 app_name = 'modulos'
 
 urlpatterns = [
-    path('<slug:slug>', detalhe, name='detalhe'),
-    path('aulas/<slug:slug>', aula, name='aula'),
+    path('<slug:slug>', views.detalhe, name='detalhe'),
+    path('aulas/<slug:slug>', views.aula, name='aula'),
+    path('', views.indice, name='indice'),
 ]
