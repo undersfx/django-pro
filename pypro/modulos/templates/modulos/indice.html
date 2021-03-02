@@ -5,6 +5,7 @@
 {% block description %}Página com informações sobre o módulo {{modulo.titulo}}{% endblock description %}
 
 {% block body %}
+{% for modulo in modulos %}
 	<div class="container">
 		<div class="row pb-3 pt-3">
 			<div class="col-md-12 mb-3">
@@ -19,11 +20,12 @@
 
 				<h2>Aulas</h2>
 				<ol>
-					{% for aula in aulas %}
+					{% for aula in modulo.aula_set.all %}
 						<li><a href="{{ aula.get_absolute_url }}">{{ aula.titulo }}</a></li>
 					{% endfor %}
 				</ol>
 		    </div>
 		</div>
 	</div>
+{% endfor %}
 {% endblock body %}

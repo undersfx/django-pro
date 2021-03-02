@@ -4,7 +4,8 @@ from pypro.modulos import facade
 
 
 def indice(request):
-    return render(request, 'modulos/indice.html')
+    modulos = facade.listar_modulos_com_aulas()
+    return render(request, 'modulos/indice.html', context={'modulos': modulos})
 
 
 def detalhe(request, slug):
