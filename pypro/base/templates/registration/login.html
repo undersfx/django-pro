@@ -8,15 +8,14 @@
 		<div class="row pb-3 pt-3">
 			<div class="col-md-12">
 				{% if form.errors %}
-				<p>Your username and password didn't match. Please try again.</p>
+				<p>As credenciais não batem. Por favor, tente novamente.</p>
 				{% endif %}
 
 				{% if next %}
 				{% if user.is_authenticated %}
-				<p>Your account doesn't have access to this page. To proceed,
-					please login with an account that has access.</p>
+				<p>Sua conta não tem acesso a essa página.</p>
 				{% else %}
-				<p>Please login to see this page.</p>
+				<p>Por favor faça login para visualizar essa página.</p>
 				{% endif %}
 				{% endif %}
 
