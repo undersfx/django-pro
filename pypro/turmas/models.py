@@ -9,6 +9,9 @@ class Turma(models.Model):
     fim = models.DateField()
     alunos = models.ManyToManyField(get_user_model(), through='Matricula')
 
+    def __str__(self):
+        return self.nome
+
 
 class Matricula(models.Model):
     data = models.DateTimeField(auto_now_add=True)
