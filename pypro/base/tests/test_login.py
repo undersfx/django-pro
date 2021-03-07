@@ -1,7 +1,7 @@
 import pytest
 from django.urls import reverse
 from model_bakery import baker
-from pypro.django_assertions import assert_contains
+from pypro.django_assertions import assert_contains, assert_not_contains
 
 
 @pytest.fixture()
@@ -47,3 +47,17 @@ def test_botao_entrar(resp_home):
 
 def test_link_de_login(resp_home):
     assert_contains(resp_home, reverse('login'))
+
+
+@pytest.fixture()
+def resp_home_com_usuario_logado(client_com_usuario_logado, db):
+    resp = client_com_usuario_logado.get(reverse('base:home'))
+    return resp
+
+
+def test_botao_entrar_logado(resp_home_com_usuario_logado):
+    assert_not_contains(resp_home_com_usuario_logado, 'Entrar')
+
+
+def test_link_de_login_logado(resp_home_com_usuario_logado):
+    assert_not_contains(resp_home_com_usuario_logado, reverse('login'))
