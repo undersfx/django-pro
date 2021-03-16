@@ -6,12 +6,31 @@ Aplicação disponível em [Heroku](https://pythonprodjangosfx.herokuapp.com/)
 
 
 ### Twelve Factor App
-- Pipenv
-- Travis CI
-- Pytest
-- Heroku CD
-- Codecov
-- CDN (Amazon S3)
-- Sentry
-- Django Debug Toolbar
-- Heroku Backup
+- Gestão de dependências e build determinístico com **Pipenv**
+- Integração contínua com **Travis CI**
+- Pipeline de testes e qualidade de código com com **Pytest** e **Flake8** 
+- Monitoramento de cobertura de código **Codecov**
+- Entrega contínua com **Heroku** branch deploy
+- Content Delivery Network com **Amazon S3**
+- Monitoramento de Erros com **Sentry**
+- Revisão de Queries e configurações **Django Debug Toolbar** 
+- Backup automático com **Heroku**
+- Configuração dinâmica com **Python Decouple**
+
+### Integrações
+
+- Lista de espera para **Mailchimp**
+- Streaming de vídeos com **Vimeo**
+- Pagamento com **PagSeguro**
+- Emails com **Mailgun**
+
+### Banco de Dados
+- **PostgreSQL** dockerizado para ambiente dev
+- Migração de dados com **Django Migrations**
+- Otimização de queries com **Prefetch**
+
+### Outras Features
+- Autenticação e Autorização
+- Frontend com **Bootstrap**
+- Django Extensions
+- Django Templates
