@@ -23,7 +23,7 @@ Disponível em [Heroku](https://pythonprodjangosfx.herokuapp.com/).
 - Lista de espera para **Mailchimp**
 - Streaming de vídeos com **Vimeo**
 - Pagamento com **PagSeguro**
-- Emails com **Mailgun**
+- Emails (Recuperação de Senha) com **Sendinblue**
 
 ### Banco de Dados
 - **PostgreSQL** dockerizado para ambiente dev
