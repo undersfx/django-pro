@@ -32,6 +32,6 @@ Disponível em [Heroku](https://pythonprodjangosfx.herokuapp.com/).
 
 ### Outras Features
 - Autenticação e Autorização
-- Frontend com **Bootstrap**
+- Frontend com **Bootstrap 4.5**
 - Django Extensions
 - Django Templates
