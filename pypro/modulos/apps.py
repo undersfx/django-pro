@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class ModulosConfig(AppConfig):
-    name = 'modulos'
+    name = 'pypro.modulos'

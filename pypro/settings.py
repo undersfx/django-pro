@@ -40,6 +40,8 @@ LOGOUT_REDIRECT_URL = '/'
 
 # Application definition
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 INSTALLED_APPS = [
     'pypro.base',
     'pypro.turmas',
